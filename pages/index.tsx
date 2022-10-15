@@ -35,8 +35,6 @@ const Home: NextPage = () => {
         <WhyVote />
         <HowVote />
         <RemindMeToVote />
-        <div>Page 4</div>
-        <div>Page 5</div>
       </TikTokFrame>
     </>
   );
