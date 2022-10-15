@@ -14,8 +14,11 @@ export const WhyVote = () => {
 
   useEffect(() => {
     if (playerRef) {
-      playerRef.pause();
-      playerRef.seekTo(350);
+      playerRef.addEventListener("ended", () => {
+        playerRef.pause();
+        playerRef.seekTo(340);
+        playerRef.pause();
+      });
     }
   }, [playerRef]);
 
