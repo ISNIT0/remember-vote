@@ -3,7 +3,13 @@ import { useEffect, useState } from "react";
 import { isBrowser } from "../util/isBrowser";
 import { WhyVoteVideo } from "./WhyVoteVideo/WhyVoteVideo";
 
-export const WhyVote = () => {
+export const WhyVote = ({
+  setCanScroll,
+  canScroll,
+}: {
+  setCanScroll: (canScroll: boolean) => void;
+  canScroll: boolean;
+}) => {
   const [playerRef, setPlayerRef] = useState<PlayerRef | null>(null);
   const [showVideo, setShowVideo] = useState(false);
   useEffect(() => {
@@ -16,8 +22,9 @@ export const WhyVote = () => {
     if (playerRef) {
       playerRef.addEventListener("ended", () => {
         playerRef.pause();
-        playerRef.seekTo(340);
+        playerRef.seekTo(220);
         playerRef.pause();
+        setCanScroll(true);
       });
     }
   }, [playerRef]);
@@ -27,13 +34,13 @@ export const WhyVote = () => {
       <span className="sticky-header why-vote">
         <h1>WHY</h1>
       </span>
-      <div id="why-vote" className="why-vote">
+      <div id="why-vote" className={`why-vote ${!canScroll ? 'no-scroll' : ''}`}>
         {showVideo ? (
           <Player
             ref={(ref) => setPlayerRef(ref)}
             autoPlay
             component={WhyVoteVideo}
-            durationInFrames={350}
+            durationInFrames={230}
             compositionWidth={window.innerWidth}
             compositionHeight={window.innerHeight}
             fps={30}

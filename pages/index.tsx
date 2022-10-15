@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { TikTokFrame } from "../components/Frame";
 import { HowVote } from "../components/HowVote";
 import { RemindMeToVote } from "../components/RemindMeToVote";
@@ -10,6 +10,7 @@ import { isBrowser } from "../util/isBrowser";
 
 const Home: NextPage = () => {
   const shouldRunAnalytics = isBrowser();
+  const [canScroll, setCanScroll] = useState(false);
   useEffect(() => {
     ampli.load({ environment: "production" });
     ampli.pageViewed({ utm_source: "" });
@@ -31,8 +32,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async />
-      <TikTokFrame>
-        <WhyVote />
+      <TikTokFrame canScroll={canScroll}>
+        <WhyVote setCanScroll={setCanScroll} canScroll={canScroll} />
         <HowVote />
         <RemindMeToVote />
       </TikTokFrame>

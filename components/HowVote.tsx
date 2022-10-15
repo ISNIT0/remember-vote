@@ -15,7 +15,7 @@ export const HowVote = () => {
             <small>six weeks before</small>
           </li>
           <li>
-            <h1>Got to a hustings</h1>
+            <h1>Go to a hustings</h1>
             <small>three weeks before</small>
           </li>
           <li>

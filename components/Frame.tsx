@@ -4,6 +4,7 @@ import { ampli } from "../src/ampli";
 
 export const TikTokFrame = (props: {
   children: React.ReactNode;
+  canScroll: boolean;
 }): JSX.Element => {
   const onScrollDebounced = useMemo(() => {
     return debounce((ev: UIEvent<HTMLDivElement>) => {
@@ -18,7 +19,11 @@ export const TikTokFrame = (props: {
   }, []);
 
   return (
-    <div className="tiktok-frame" onScroll={onScrollDebounced}>
+    <div
+      className="tiktok-frame"
+      onScroll={onScrollDebounced}
+      style={{ overflow: props.canScroll ? "auto" : "hidden" }}
+    >
       {props.children}
     </div>
   );
