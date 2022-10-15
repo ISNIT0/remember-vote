@@ -9,8 +9,6 @@ export const RemindMeToVote = () => {
         <h1>Remind Me</h1>
       </span>
       <div className="remind-me">
-        <h2>Feel overwhelmed? Too much to remember?</h2>
-        <h1>Get reminders when you need to do something about voting...</h1>
         <div>
           <PrimaryButton
             onClick={() => {
@@ -25,8 +23,50 @@ export const RemindMeToVote = () => {
               });
             }}
           >
-            Setup Reminders
+            GET REMINDERS
           </PrimaryButton>
+        </div>
+      </div>
+      <div className="remind-me">
+        <div>
+          <div>
+            <a
+              href="https://www.gov.uk/register-to-vote"
+              className="primary-button final-page"
+            >
+              Register to Vote
+            </a>
+          </div>
+          <br />
+          <br />
+          <div>
+            <a
+              href="https://www.gov.uk/register-to-vote"
+              className="primary-button final-page"
+            >
+              Info on your candidates
+            </a>
+          </div>
+          <br />
+          <br />
+          <div>
+            <a
+              href="https://www.gov.uk/register-to-vote"
+              className="primary-button final-page"
+            >
+              Info on hustings
+            </a>
+          </div>
+          <br />
+          <br />
+          <div>
+            <a
+              href="https://www.gov.uk/register-to-vote"
+              className="primary-button final-page"
+            >
+              The voting process
+            </a>
+          </div>
         </div>
       </div>
     </>

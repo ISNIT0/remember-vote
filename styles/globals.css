@@ -74,17 +74,18 @@ a {
 
 
 .primary-button {
-  padding: 12px 24px;
-  background: linear-gradient(93.74deg, #622f5b 9.47%, #7c3e97 100%);
-  border-radius: 24px;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 150%;
-  text-decoration: none !important;
+  display: inline-block;
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 47px;
   transition: 0.2s;
-  color: white;
+  color: #29A577;
   border: none;
   cursor: pointer;
+  background-color: white;
+  padding: 14px;
 }
 
 .primary-button:hover {
@@ -156,4 +157,60 @@ div.why-vote:after {
   100% {
     opacity: 0.5;
   }
+}
+
+.how-vote ul h1 {
+  font-family: 'Futura';
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 83.64%;
+  margin: 0;
+}
+
+.how-vote ul small {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.how-vote ul {
+  list-style: none;
+}
+
+.how-vote ul li {
+  position: relative;
+  margin: 0;
+  padding-left: 50px;
+  text-align: left;
+  margin-bottom: 2em
+}
+
+.how-vote ul li:not(:last-child):before {
+  content: '';
+  background-color: #D9D6FF;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 6px;
+  width: 8px;
+  height: 160%
+}
+
+.how-vote ul li:after {
+  content: '';
+  background: #D9D6FF;
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.primary-button.final-page {
+  width: 274px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
 }

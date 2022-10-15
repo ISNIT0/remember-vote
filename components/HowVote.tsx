@@ -5,23 +5,24 @@ export const HowVote = () => {
         <h1>HOW</h1>
       </span>
       <div className="how-vote">
-        <h1>How to vote?</h1>
-      </div>
-      <div className="how-vote">
-        <h1>Register to vote</h1>
-        <h2>Register to vote by XXX</h2>
-      </div>
-      <div className="how-vote">
-        <h1>Research the candidates</h1>
-      </div>
-      <div className="how-vote">
-        <h1>Go to a Hustings</h1>
-      </div>
-      <div className="how-vote">
-        <h1>Find your polling station</h1>
-      </div>
-      <div className="how-vote">
-        <h1>Vote</h1>
+        <ul>
+          <li>
+            <h1>Register to vote</h1>
+            <small>right now!</small>
+          </li>
+          <li>
+            <h1>Research candidates</h1>
+            <small>six weeks before</small>
+          </li>
+          <li>
+            <h1>Got to a hustings</h1>
+            <small>three weeks before</small>
+          </li>
+          <li>
+            <h1>Vote!</h1>
+            <small>election day</small>
+          </li>
+        </ul>
       </div>
     </>
   );
