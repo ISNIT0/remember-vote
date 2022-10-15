@@ -1,7 +1,6 @@
 import { ampli } from "../src/ampli";
 import { isBrowser } from "../util/isBrowser";
 import { PrimaryButton } from "./PrimaryButton";
-const OneSignal = isBrowser() ? (window as any).OneSignal : null;
 
 export const RemindMeToVote = () => {
   return (
@@ -12,21 +11,15 @@ export const RemindMeToVote = () => {
         <div>
           <PrimaryButton
             onClick={() => {
-              OneSignal?.showNativePrompt();
-              OneSignal?.on(
-                "subscriptionChange",
-                function (isSubscribed: boolean) {
-                  if (isSubscribed) {
-                    console.log({ isSubscribed });
-
-                    const postcode = prompt("Please Enter Postcode");
-                    OneSignal.sendTags({
-                      postcode,
-                    });
-                    ampli.subscribed({ postCode: postcode! });
-                  }
-                }
-              );
+              const OneSignal = isBrowser() ? (window as any).OneSignal : null;
+              console.log({ OneSignal });
+              OneSignal?.showNativePrompt().then(() => {
+                const postcode = prompt("Please Enter Postcode");
+                OneSignal.sendTags({
+                  postcode,
+                });
+                ampli.subscribed({ postCode: postcode! });
+              });
             }}
           >
             Setup Reminders
