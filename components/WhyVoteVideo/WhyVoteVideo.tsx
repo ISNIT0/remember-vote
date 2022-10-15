@@ -13,10 +13,10 @@ export const WhyVoteVideo = () => {
       <Sequence from={55} durationInFrames={195}>
         <Screen2 />
       </Sequence>
-      <Sequence from={190} durationInFrames={330}>
+      {/* <Sequence from={190} durationInFrames={330}>
         <Screen3 />
-      </Sequence>
-      <Sequence from={320} durationInFrames={360}>
+      </Sequence> */}
+      <Sequence from={190} durationInFrames={230}>
         <ScrollScreen />
       </Sequence>
     </>
