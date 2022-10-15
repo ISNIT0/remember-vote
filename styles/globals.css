@@ -4,6 +4,17 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 a {
@@ -19,8 +30,63 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+
+
+.tiktok-frame {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+.tiktok-frame>div {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.tiktok-frame>div:nth-child(1) {
+  background-color: pink;
+}
+
+.tiktok-frame>div:nth-child(2) {
+  background-color: azure;
+}
+
+.tiktok-frame>div:nth-child(3) {
+  background-color: thistle;
+}
+
+.tiktok-frame>div:nth-child(4) {
+  background-color: tomato;
+}
+
+
+.primary-button {
+  padding: 12px 24px;
+  background: linear-gradient(93.74deg, #622f5b 9.47%, #7c3e97 100%);
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 150%;
+  text-decoration: none !important;
+  transition: 0.2s;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
 }
