@@ -5,7 +5,10 @@ import { PrimaryButton } from "./PrimaryButton";
 export const RemindMeToVote = () => {
   return (
     <>
-      <div>
+      <span className="sticky-header remind-me">
+        <h1>Remind Me</h1>
+      </span>
+      <div className="remind-me">
         <h2>Feel overwhelmed? Too much to remember?</h2>
         <h1>Get reminders when you need to do something about voting...</h1>
         <div>
